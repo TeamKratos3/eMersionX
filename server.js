@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const logger = require("morgan");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -17,7 +18,7 @@ app.use(routes);
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist",
+  process.env.MONGODB_URI || "mongodb://heroku_jl7wtlqm:ureg1inoc1j9pcqsfvphjb1g5c@ds149724.mlab.com:49724/heroku_jl7wtlqm",
   {
     useMongoClient: true
   }
