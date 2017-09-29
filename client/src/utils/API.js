@@ -2,6 +2,7 @@ import axios from "axios";
 const FRIENDURL = "http://api.steampowered.com/ISteamUser/GetFriendList/v0001/?key=B1B7A2E56045EA3CBCF32A09D00A1F7D&steamid=";
 const RECENTURL = "http://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=B1B7A2E56045EA3CBCF32A09D00A1F7D&steamid=";
 const ALLURL = "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=B1B7A2E56045EA3CBCF32A09D00A1F7D&steamid="
+var PROFILEINFOURL = " http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=B1B7A2E56045EA3CBCF32A09D00A1F7D&steamids="
 const FRIENDKEY = "&relationship=friend";
 const RECENTKEY = "&format=json"
 
@@ -11,10 +12,14 @@ export default {
   }
 
   recent: function(query) {
-    return axiox.get(RECENTURL + query + RECENTKEY);
+    return axios.get(RECENTURL + query + RECENTKEY);
   }
 
   all: function(query) {
-    return axiox.get(ALLURL + query + RECENTKEY);
+    return axios.get(ALLURL + query + RECENTKEY);
+  }
+
+  summary: function(query) {
+    return axios.get(PROFILEINFOURL + query);
   }
 };
