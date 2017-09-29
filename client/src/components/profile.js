@@ -15,4 +15,4 @@ const Profile = props =>
     </h3>
   </div>;
 
-export default MovieDetail;
+export default Profile;
