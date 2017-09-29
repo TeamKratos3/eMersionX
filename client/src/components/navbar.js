@@ -22,4 +22,6 @@ const Nav = props =>
     </div>
     </div>
     </div>
-  </nav>
+  </nav>;
+
+export default Nav;
