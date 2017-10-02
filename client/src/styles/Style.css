@@ -1,0 +1,40 @@
+body {
+background: #0C0032;
+color: white;
+}
+
+.nav-tabs{
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.coolHeader {
+  font-size: 6rem;
+  font-family: 'Archivo Black', sans-serif;
+  text-align: center;
+}
+
+.jumbotron{
+  background: #3500D3;
+  text-align: center;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 6rem;
+}
+
+.panel-body{
+  font-size: 2rem;
+  font-family: 'Archivo Black', sans-serif;
+  color: black;
+}
+/* 
+.header {
+  background: #f9b713;
+  height: 200px;
+}
+
+.header h1 {
+  margin: 0;
+  padding-top: 75px;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+} */
