@@ -17,7 +17,7 @@ const LoginPage = (props) => {
     return (
         <div>
             <ReactSignupLoginComponent
-                title="My awesome company"
+                title="eMersionX"
                 handleSignup={signupWasClickedCallback}
                 handleLogin={loginWasClickedCallback}
                 handleRecoverPassword={recoverPasswordWasClickedCallback}
