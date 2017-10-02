@@ -5,6 +5,7 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Blog from "./components/pages/Blog";
 import Contact from "./components/pages/Contact";
+import Login from "./components/pages/Login";
 // import HelloBootstrap from "./components/HelloBootstrap";
 import "./styles/Style.css";
 
@@ -16,6 +17,7 @@ const App = () =>
       <Route exact path="/about" component={About} />
       <Route exact path="/blog" component={Blog} />
       <Route path="/contact" component={Contact} />
+      <Route path="/login" component={Login} />
       {/* <HelloBootstrap /> */}
     </div>
   </Router>;
