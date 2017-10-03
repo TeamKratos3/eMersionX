@@ -20,6 +20,9 @@ const Navpills = () =>
     >
       <Link to="/contact/learn">About</Link>
     </li>
+    <li className={window.location.pathname === "/form" ? "active" : ""}>
+      <Link to="/form">Sign Up</Link>
+    </li>
   </ul>;
 
 export default Navpills;

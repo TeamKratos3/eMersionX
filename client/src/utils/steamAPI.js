@@ -8,11 +8,11 @@ const RECENTKEY = "&format=json"
 export default {
   friends: function(query) {
     return axios.get(FRIENDURL + query + FRIENDKEY);
-  }
+  },
 
   recent: function(query) {
     return axiox.get(RECENTURL + query + RECENTKEY);
-  }
+  },
 
   all: function(query) {
     return axiox.get(ALLURL + query + RECENTKEY);

@@ -6,6 +6,7 @@ import About from "./components/pages/About";
 import Blog from "./components/pages/Blog";
 import Contact from "./components/pages/Contact";
 import Login from "./components/pages/Login";
+import Form from "./components/pages/Form";
 // import HelloBootstrap from "./components/HelloBootstrap";
 import "./styles/Style.css";
 
@@ -18,6 +19,7 @@ const App = () =>
       <Route exact path="/blog" component={Blog} />
       <Route path="/contact" component={Contact} />
       <Route path="/login" component={Login} />
+      <Route path="/form" component={Form} />
       {/* <HelloBootstrap /> */}
     </div>
   </Router>;
