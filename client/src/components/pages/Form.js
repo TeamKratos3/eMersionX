@@ -27,8 +27,8 @@ class Form extends Component {
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-    if (!this.state.firstName || !this.state.lastName || !this.state.email || !this.state.city || !this.state.state || !this.state.zipcode) {
-      alert("Fill out your first and last name please!");
+    if (!this.state.FullName || !this.state.username || !this.state.password || !this.state.steamId) {
+      alert("Fill out all fields!");
     }
 
     else if (this.state.password.length < 6) {
@@ -83,7 +83,7 @@ class Form extends Component {
                 <input
                   className="form-control"
                   value={this.state.username}
-                  name="email"
+                  name="username"
                   onChange={this.handleInputChange}
                   type="text"
                   placeholder="Username"

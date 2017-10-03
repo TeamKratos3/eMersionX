@@ -23,6 +23,9 @@ const Navpills = () =>
     <li className={window.location.pathname === "/form" ? "active" : ""}>
       <Link to="/form">Sign Up</Link>
     </li>
+    <li className={window.location.pathname === "/login" ? "active" : ""}>
+      <Link to="/login">Login</Link>
+    </li>
   </ul>;
 
 export default Navpills;
