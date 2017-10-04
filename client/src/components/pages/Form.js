@@ -7,7 +7,8 @@ class Form extends Component {
     FullName: "",
     username: "",
     password: "",
-    steamId: ""
+    steamId: "",
+    twitchName: ""
   };
 
   handleInputChange = event => {
@@ -51,10 +52,13 @@ class Form extends Component {
         fullname: this.state.FullName,
         username: this.state.username,
         password: this.state.password,
-        steamid: this.state.steamId
+        steamid: this.state.steamId,
+        twitchname: this.state.twitchName
       })
       .then(res => console.log(res))
         .catch(err => console.log(err));
+
+    window.location.href = "/login";
   }
 };
 
@@ -104,6 +108,15 @@ class Form extends Component {
                   onChange={this.handleInputChange}
                   type="text"
                   placeholder="Steam ID"
+                />
+                <label htmlFor="twitchName">Twitch Username:</label>
+                <input
+                  className="form-control"
+                  value={this.state.twitchName}
+                  name="twitchName"
+                  onChange={this.handleInputChange}
+                  type="text"
+                  placeholder="Twitch Name"
                 />
                 <button
                   className="btn btn-primary btn-md"
