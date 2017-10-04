@@ -31,7 +31,7 @@ class Login extends Component {
         console.log(res.data)
         if(this.state.username===res.data[0].username && this.state.password===res.data[0].password)
           {
-            window.location.href = "/home#" + res.data[0]._id
+            window.location.href = "/#" + res.data[0].steamid
           }
         else if (this.state.username!==res.data[0].username || this.state.password!==res.data[0].password)
           {

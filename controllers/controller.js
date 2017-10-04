@@ -9,7 +9,7 @@ module.exports = {
   },
   findByUsername: function(req, res) {
     db.User
-      .find(username:req.params.username)
+      .find({username:req.params.username})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

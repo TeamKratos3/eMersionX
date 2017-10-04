@@ -48,11 +48,10 @@ class Form extends Component {
     //     \nYour Skill: ${this.state.skill}`);
 
      API.saveUser({
-
-        FullName: this.state.firstName,
+        fullname: this.state.FullName,
         username: this.state.username,
         password: this.state.password,
-        steamId: this.state.steamId
+        steamid: this.state.steamId
       })
       .then(res => console.log(res))
         .catch(err => console.log(err));
@@ -69,7 +68,7 @@ class Form extends Component {
 
           <div className="col-lg-6">
 
-              <form action="/api/users/create" method="POST" className="form">
+               <form className="form">
                 <label htmlFor="FullName">Full Name:</label>
                 <input
                   className="form-control"
