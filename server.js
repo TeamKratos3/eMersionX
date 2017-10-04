@@ -22,7 +22,7 @@ app.use(routes);
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://heroku_k2r6v925:hhkl0p6dvkmaq35levh49fjrsm@ds157584.mlab.com:57584/heroku_k2r6v925",
+  process.env.MONGODB_URI || "mongodb://localhost/eMersionX",
   {
     useMongoClient: true
   }

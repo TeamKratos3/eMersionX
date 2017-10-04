@@ -6,7 +6,7 @@ const controller = require("../../controllers/controller");
 router.route("/create")
   .post(controller.create);
 
-router.route("/:id")
-  .get(controller.findById);
+router.route("/signIn/:id")
+  .get(controller.findByUsername);
 
 module.exports = router;
