@@ -28,7 +28,7 @@ class Form extends Component {
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-    if (!this.state.FullName || !this.state.username || !this.state.password || !this.state.steamId) {
+    if (!this.state.FullName || !this.state.username || !this.state.password || !this.state.steamId || !this.state.twitchName) {
       alert("Fill out all fields!");
     }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import Button from 'react-bootstrap/lib/Button';
+import API from "../../utils/twitchAPI";
 const About = () =>
   <div>
     <div className="jumbotron">
