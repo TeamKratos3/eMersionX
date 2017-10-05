@@ -9,7 +9,7 @@ import {Row} from "react-bootstrap";
 import {Col} from "react-bootstrap";
 
 const placeHolderInput= window.location.href.split("#");
-const queryInput = placeHolderInput[1]
+const queryInput = placeHolderInput[1];
 console.log(queryInput);
 
 class Results extends Component {
