@@ -56,10 +56,11 @@ class Form extends Component {
         steamid: this.state.steamId,
         twitchname: this.state.twitchName
       })
-      .then(res => console.log(res))
+      .then(res => {
+        console.log(res);
+        window.location.href = "/";
+      })
         .catch(err => console.log(err));
-
-    window.location.href = "/login";
   }
 };
 
