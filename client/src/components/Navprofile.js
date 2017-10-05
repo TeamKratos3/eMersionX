@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navpills = () =>
+const Navprofile = () =>
   <ul className="nav nav-tabs">
-    <li className={window.location.pathname === "/form" ? "active" : ""}>
-      <Link to="/form">Sign Up</Link>
+    <li className={window.location.pathname === "/app" ? "active" : ""}>
+      <Link to="/app">Home</Link>
     </li>
     <li className={window.location.pathname === "/" ? "active" : ""}>
-      <Link to="/">Login</Link>
+      <Link to="/">Logout</Link>
     </li>
   </ul>;
 
-export default Navpills;
+export default Navprofile;

@@ -1,34 +1,65 @@
-import React from "react";
-import Button from 'react-bootstrap/lib/Button';
+
+import React, { Component } from "react";
+import API from "../../utils/steamAPI";
+import Card from "./Profile";
+import Nav from "../Navprofile";
+import {Grid} from "react-bootstrap";
+import {Row} from "react-bootstrap";
+import {Col} from "react-bootstrap";
+
+const placeHolderInput= window.location.href.split("#");
+const queryInput = placeHolderInput[1]
+console.log(queryInput);
+
+class Results extends Component {
+
+  state = {
+    skills: []
+  };
+
+  componentDidMount() {
+    this.loadResults();
+  }
+
+  componentDidUpdate() {
+    this.loadResults();
+  }
+
+  loadResults = () => {
+
+    API.profile(queryInput)
+    .then(res => this.setState({ skills: res.data }))
+    .catch(err => console.log(err));
+  };
+
+    render() {
+      return (
+        <div>
+        <Nav />
+        <Grid>
+          <Row>
+              {this.state.skills.length ? (
+                <div>
+                {this.state.skills.map(result => (
+                  <Col xs={12} md={10} lg={8}>
+
+                  <Card
+                    photo={result.avatarfull}
+                    name={result.personaname}
+                    country={result.loccountrycode}
+                    state={result.locstatecode}
+                  /></Col>
+                ))}
+                </div>
+            ) : (
+              <h3>No information Available!</h3>
+            )}
+          </Row>
+        </Grid>
+        </div>
+    );
+  }
+}
 
 
-const Home = () => (
-  <div className="main-container">
-    <h1 className="coolHeader">eMersionX</h1>
-    <div className="jumbotron">
-      <h1>Welcome, Garrett!</h1>
-      <p>Gaming is Life!</p>
-      <p>
-        <Button bsStyle="success">Message</Button>
-        <Button bsStyle="info">Add</Button>
-      </p>
-    </div>
-    <div className="panel panel-default">
-      <div className="panel-heading">
-        <h3 className="panel-title">Player Summary</h3>
-      </div>
-      <div className="panel-body">
-      I am a computer programmer who loves to play video games. You will find me mostly playing PUBG and League on steam,
-      but I also love to play Nintendo Games on the Nintendo Switch. PS. The Legend of Zelda Ocarina of Time is the GOAT.
-      </div>
-    </div>
-    <div className="panel panel-default">
-      <div className="panel-heading">
-        <h3 className="panel-title">Panel title</h3>
-      </div>
-      <div className="panel-body">Panel content</div>
-    </div>
-  </div>
-);
-
-export default Home;
+export default Results;

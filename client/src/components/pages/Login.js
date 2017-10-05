@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/monogoAPI";
+import Navpills from "../Navpills";
 
 class Login extends Component {
 
@@ -31,7 +32,7 @@ class Login extends Component {
         console.log(res.data)
         if(this.state.username===res.data[0].username && this.state.password===res.data[0].password)
           {
-            window.location.href = "/#" + res.data[0].steamid
+            window.location.href = "/app#" + res.data[0].steamid
           }
         else if (this.state.username!==res.data[0].username || this.state.password!==res.data[0].password)
           {

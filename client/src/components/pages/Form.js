@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/monogoAPI";
+import Navpills from "../Navpills";
 
 class Form extends Component {
   // Setting the component's initial state
@@ -82,7 +83,7 @@ class Form extends Component {
                   type="text"
                   placeholder="Full Name"
                 />
-                <label htmlFor="username">Email:</label>
+                <label htmlFor="username">Username:</label>
                 <input
                   className="form-control"
                   value={this.state.username}
