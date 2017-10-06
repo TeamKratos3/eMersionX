@@ -8,13 +8,18 @@ import {Button} from "react-bootstrap";
 
 const Card = props => (
   <div>
-  <Thumbnail src={props.image} alt="User Photo" />
   <h1>
     <strong>Title:</strong> {props.title}
   </h1>
-  <h3>
-    <strong>Videos Url:</strong> {props.videos}
-  </h3>
+      <iframe
+    	src= {props.videos}
+      id= {props.channel}
+    	height="300"
+    	width="400"
+    	frameborder="0"
+      scrolling="false"
+    	allowfullscreen="true">
+	   </iframe>
   </div>
 );
 

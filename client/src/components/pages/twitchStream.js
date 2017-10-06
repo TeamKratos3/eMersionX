@@ -88,7 +88,7 @@ class Results extends Component {
           <Card
             title={result.title}
             videos={result.url}
-            image={result.preview}
+            channel={result.channel.name}
           />
           </Col>
           ))}
