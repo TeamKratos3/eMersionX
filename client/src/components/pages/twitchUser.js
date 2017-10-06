@@ -1,7 +1,6 @@
 import React from "react";
 import {Thumbnail} from "react-bootstrap";
 import {Button} from "react-bootstrap";
-import {Form} from "Form";
 
 //let login_name = this.state.twitchName;
 
@@ -9,16 +8,17 @@ import {Form} from "Form";
 
 const Card = props => (
   <div>
+  <h1>
+    <strong>Title:</strong> {props.title}
+  </h1>
       <iframe
-    	src= {"http://player.twitch.tv/?channel=" + this.state.twitchName}
+    	src= {props.videos}
     	height="300"
     	width="400"
     	frameborder="0"
-    	scrolling="no"
-    	allowfullscreen="false">
+    	allowfullscreen="true">
 	   </iframe>
   </div>
 );
 
 export default Card;
-

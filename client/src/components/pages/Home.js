@@ -57,6 +57,10 @@ class Results extends Component {
     window.location.href = "/friends#" + queryInput;
   };
 
+  windowLocationTwitch = () => {
+    window.location.href = "/twitch#" + queryInput;
+  };
+
     render() {
       return (
         <div>
@@ -72,6 +76,9 @@ class Results extends Component {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#" onClick={this.windowLocationFriends}>Friends</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#" onClick={this.windowLocationTwitch}>Twitch</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/">Logout</a>

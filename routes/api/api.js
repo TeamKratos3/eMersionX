@@ -9,4 +9,7 @@ router.route("/create")
 router.route("/signIn/:username")
   .get(controller.findByUsername);
 
+router.route("/twitch/:steamid")
+    .get(controller.findBySteam);
+
 module.exports = router;

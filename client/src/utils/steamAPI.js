@@ -4,7 +4,7 @@ const RECENTURL = "http://api.steampowered.com/IPlayerService/GetRecentlyPlayedG
 const ALLURL = "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=B1B7A2E56045EA3CBCF32A09D00A1F7D&steamid="
 const PROFILEURL = " http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=B1B7A2E56045EA3CBCF32A09D00A1F7D&steamids="
 const FRIENDKEY = "&relationship=friend";
-const RECENTKEY = "&format=json"
+const RECENTKEY = "&format=json";
 
 export default {
   profile: function(query) {

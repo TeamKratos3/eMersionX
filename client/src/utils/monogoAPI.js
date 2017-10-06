@@ -12,5 +12,9 @@ export default {
   //Get the email
   signIn: function(userEmail) {
     return axios.get("/api/users/signIn/" + userEmail);
+  },
+
+  Twitch: function(id) {
+    return axios.get("/api/users/twitch/" + id);
   }
 };
