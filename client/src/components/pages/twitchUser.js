@@ -13,10 +13,12 @@ const Card = props => (
   </h1>
       <iframe
     	src= {props.videos}
+      id= {props.channel}
     	height="300"
     	width="400"
     	frameborder="0"
-    	allowfullscreen="true">
+      scrolling="false"
+    	allowfullscreen="false">
 	   </iframe>
   </div>
 );
