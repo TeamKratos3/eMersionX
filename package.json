@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/TeamKratos3/eMersionX#readme",
   "dependencies": {
-    "axios": ">=0.18.1",
+    "axios": ">=0.21.1",
     "body-parser": "^1.18.2",
     "express": "^4.15.5",
     "express-session": "^1.15.6",
